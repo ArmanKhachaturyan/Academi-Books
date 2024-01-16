@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksAcademi</title>
+    <Link rel="stylesheet" href="../BookCatalog/catalog.css"></Link>
+
+</head>
+<%- include('../partials/header', { pageTitle: 'Book Page' }) %>
+
+    <div class="main-serch">
+
+        <div class="search-bar">
+            <div class="search-icon">🔍</div>
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+
+        <div class="filter-optionsDev">
+            <a href="#" class="filter-option">All Boooks</a>
+            <a href="#" class="filter-option">Fiction</a>
+            <a href="#" class="filter-option">Non Fiction</a>
+            <a href="#" class="filter-option">Biography</a>
+            <a href="#" class="filter-option">History</a>
+
+        </div>
+        <div class="resetFiltersDEV"> <button class="resetFilters">Reset Filters</button>
+        </div>
+
+    </div>
+    <div class="main-area">
+
+        <div class="book-listings">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Category</th>
+                        <th>Availability</th>
+                        <th>Img</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% book.forEach(book => { %>
+                        <tr>
+                            <td class="book-title">
+                                <a class="book-title" href="/book/<%= book._id %>">
+                                    <%= book.title %>
+                                </a>
+                            </td>
+                            <td class="book-authors ">
+
+                                <%= book.authors %>
+
+                            </td>
+                            <td class=" book-isbn">
+                                <%= book.isbn %>
+                            </td>
+                            <td class="book-category">
+                                <%= book.category %>
+                            </td>
+                            <td class="book-availability">
+                                <%= book.availability ? 'Available' : 'Not Available' %>
+                            </td>
+                            <td>
+                                <a href="#" <%=book.cover_url%>><img class="bookImg" src="../img/Black_Book_PNG_Clipart-1048.png" alt=""></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+            </table>
+
+        </div>
+
+
+
+    </div>
+    <dev class="load-more-buttonDev"> <button class="load-more-button">Load More</button>
+    </dev>
+    <%- include('../partials/footer') %>
+        <!--  </main>
+
+
+
+
+
+    <footer>
+        <div class="contact-details">
+            <p>Academy Address</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@academy.com</p>
+        </div>
+
+        <div class="library-hours">
+            <p><strong>Library Hours</strong></p>
+            <p>Monday - Friday: 9 AM - 6 PM</p>
+            <p>Saturday: 10 AM - 4 PM</p>
+        </div>
+
+        <div class="helpful-links">
+            <a href="#">Academy Website</a>
+            <a href="#">Social Media</a>
+            <a href="#">Feedback Form</a>
+        </div>
+    </footer>
+
+ -->
+
+        </body>
+
+</html>

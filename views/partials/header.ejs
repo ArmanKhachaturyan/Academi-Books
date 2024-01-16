@@ -1,0 +1,16 @@
+<body>
+
+    <header>
+        <a href="/"><img id="logo" src="../img/dd64da585bc57cb05e5fd4d8ce873f57.png" alt="Academy Logo"></a>
+        <nav>
+            <a href="/book" class="<%= pageTitle === 'Home' ? 'active' : '' %>">Home</a>
+            <a href="/catalog" class="<%= pageTitle === 'catalog' ? 'active' : '' %>">Catalog</a>
+            <% if (pageTitle === 'Home' ? 'active' : '' ) { %>
+
+                <a href="/login" class="<%= pageTitle === 'login' ? 'active' : '' %>">Login/Register</a>
+                <% } else { %>
+                    <a href="/logout">logout</a>.</p>
+                    <% } %>
+        </nav>
+    </header>
+    <main>

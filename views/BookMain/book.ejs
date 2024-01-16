@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksAcademi</title>
+    <Link rel="stylesheet" href="../BookMain/book.css"></Link>
+
+</head>
+<%- include('../partials/header', { pageTitle: 'Book Page' }) %>
+
+
+    <div class="welcome-banner ">
+        <div class="welcome-overlay ">
+            <div class="welcome-heading ">Welcome to Our Library</div>
+            <div class="welcome-subheading ">Discover a World of Knowledge</div>
+        </div>
+    </div>
+
+    <div class="featured-books ">
+
+        <% book.slice(0, 3).forEach(book => { %>
+            <div class="book ">
+
+                <img class="bookImg " src="../img/Black_Book_PNG_Clipart-1048.png" alt="Book 1 ">
+                <div class=" ">
+
+                    <a class="book-title " href="/book/<%=book._id %>">
+                        <%=book.title %>
+                    </a>
+
+                </div>
+                <div class="book-author">
+
+                    <%=book.authors %>
+                </div>
+
+            </div>
+            <% }); %>
+    </div>
+
+
+    </div>
+    <div class="viewAllButtonDiv">
+        <form action="/catalog" method="get">
+            <button class="view-all-button" id="view-all-button" onclick="">View All</button>
+        </form>
+    </div>
+    <dib class="recentAdditions">Recent Additions</dib>
+
+    <div class="recent-additions">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="../img/dd64da585bc57cb05e5fd4d8ce873f57.png" alt="Recent Addition 1">
+                <div class="carousel-title">Recent Addition 1</div>
+            </div>
+        </div>
+
+        <div class="carousel-navigation">
+            <div class="carousel-prev">&#9665;</div>
+            <div class="carousel-next">&#9655;</div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+
+        </body>
+
+</html>

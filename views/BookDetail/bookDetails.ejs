@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= book.title %>
+    </title>
+    <Link rel="stylesheet" href="../BookDetail/BookDetail.css"></Link>
+
+</head>
+
+
+
+<%- include('../partials/header', { pageTitle: 'Book Page' }) %>
+
+    <img class="imgGlobal " src="../img/dd64da585bc57cb05e5fd4d8ce873f57.png" alt=" Related Book 1 ">
+
+    <div class="book-details ">
+
+        <div class="book-detailss ">
+            <h1 class="book-itle">
+                <p>Titele</p>
+                <%= book.title %>
+            </h1>
+            <h2 class="book-author">
+                <p>Author</p>
+                <%= book.authors %>
+            </h2>
+            <h3 class="book-category">
+                <p>Category</p>
+                <%= book.category %>
+            </h3>
+            <h4 class="book-availability ">
+                <p>Availability</p>
+                <%= book.availability %>
+            </h4>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="options ">
+        <button class="borrow-button ">Borrow</button>
+        <button class="reserve-button ">Reserve</button>
+    </div>
+
+    <div class="related-books ">
+        <div class="related-book ">
+            <img class="imgBokk " src="../img/dd64da585bc57cb05e5fd4d8ce873f57.png " alt=" Related Book 1 ">
+            <h2>Related Book 1</h2>
+            <p class="author ">Author 1</p>
+        </div>
+        <div class="related-book ">
+            <img class="imgBokk " src="../img/dd64da585bc57cb05e5fd4d8ce873f57.png " alt=" Related Book 1 ">
+            <h2>Related Book 2</h2>
+            <p class="author ">Author 2</p>
+        </div>
+        <div class="related-book ">
+            <img class="imgBokk " src="../img/dd64da585bc57cb05e5fd4d8ce873f57.png " alt=" Related Book 1 ">
+            <h2>Related Book 3</h2>
+            <p class="author ">Author 3</p>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

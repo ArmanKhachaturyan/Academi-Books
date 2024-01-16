@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <Link rel="stylesheet" href="../Login/login.css"></Link>
+
+</head>
+
+<body>
+    <div class="main">
+        <h1>Welcome to the Library</h1>
+        <p>Explore our collection of books and user profiles.</p>
+    </div>
+    <main>
+
+        <form action="/login" method="post">
+
+            <div id="loginInputform">
+                <div id="loginInputDiv" class="loginInputDiv">
+
+                    <label for="email">Email Adress</label>
+                    <input type="email" id="loginemail" placeholder="User Name" name="email" required>
+                    <span id="text"></span>
+                    <label for="password">Password</label>
+                    <input type="password" id="passwordInput" placeholder="Password" name="password" required>
+
+                </div>
+
+                <button type="submit" id="LoginUser" class="LoginUser">Login</button>
+                <a href="/signup" class="<%= pageTitle === 'signup' ? 'active' : 'signUp' %>">Sign Up</a>
+            </div>
+
+            </div>
+        </form>
+
+
+    </main>
+    <footer>
+        <p>© 2021 Academy. All rights reserved.</p>
+
+
+    </footer>
+</body>
+
+</html>

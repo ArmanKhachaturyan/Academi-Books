@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing Up</title>
+    <Link rel="stylesheet" href="../SignUp/signUp.css"></Link>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <main>
+
+        <form action="/signup" method="post">
+            <% if (errorMessage) { %>
+                <p style="color: red;">
+                    <%= errorMessage %>
+                </p>
+                <% } %>
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" placeholder="Name">
+
+                    <label for="email">Email Adress</label>
+                    <input type="email" name="email" placeholder="Email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password">
+
+                    <!-- <label for="confirmPassword">Confirm Password:</label> -->
+                    <!-- <input type="password" id="confirmPassword" name="confirmPassword" required> -->
+                    <div class="divLogin">
+                        <button type="submit" class="login">Login</button>
+                        <a href="/login" class="<%= pageTitle === 'login' ? 'active' : 'login' %>">Login Home</a>
+                    </div>
+        </form>
+
+
+    </main>
+    <footer>
+        <p>© 2021 Academy. All rights reserved.</p>
+
+    </footer>
+</body>
+
+</html>
